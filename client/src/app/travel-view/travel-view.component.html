@@ -1,0 +1,11 @@
+<h3>Destination details</h3>
+<div *ngIf="travel">
+<div class="text"><b>Name:</b> {{ travel.name}} </div>
+<div class="text"><b>Type:</b> {{ travel.type}} </div>
+<div class="text"><b>Star:</b> {{ travel.star}} </div>
+<div class="text"><b>Basket status:</b> {{ this.basket ? 'Saved' : 'Not saved' }} </div>
+<div class="text"><b>Comments:</b> {{ travel.comments}} </div>
+<div><button class="delete" (click)="handleDelete($event)">Delete</button></div>
+</div>
+<hr>
+<a routerLink="/travel-list">The list of the destinations</a>

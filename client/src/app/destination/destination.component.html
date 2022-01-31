@@ -1,0 +1,8 @@
+<div class="destination">
+    <a routerLink="/travel-view/{{ travel._id }}">{{ travel.name }}</a>
+    <button class="basket" (click)="handleBasket($event)">{{ basket ? 'Saved' : 'Add to basket' }}</button> 
+    <div><textarea placeholder="Comments" rows="5" cols="50"></textarea></div>
+    <div><button style="background-color: rgb(161, 219, 253);">Save</button></div>
+</div>
+
+ 

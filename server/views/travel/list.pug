@@ -1,0 +1,17 @@
+extends ../layout 
+
+block content 
+    h1 List of Destinations 
+    div
+       a(href="http://46.101.95.30:9000/travel-list") Home page
+       <hr>
+    div
+       a(href="/travel/add/") Add a new destination
+    ul
+       each destination in travel
+           li
+               p <strong>Destination name:</strong> #{destination.name} 
+               p <strong>Destination type:</strong> #{destination.type}
+               p <strong>Destination star:</strong> #{destination.star}
+               a(href="/travel/"+destination._id style="margin-left: 5px") update
+               a(href="/travel/delete/"+destination.id style="margin-left: 5px") delete
