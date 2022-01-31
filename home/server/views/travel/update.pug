@@ -1,0 +1,16 @@
+extends ../layout 
+
+block content 
+    h1 Update the destination in the database 
+    form(method="post" action="/travel/"+destination.id)
+        div 
+           label(for="name") Destination name 
+           input(type="text" name="name" value=destination.name id="name")
+        div 
+           label(for="name") Destination type 
+           input(type="text" name="type" value=destination.type id="type")
+        div 
+           label(for="name") Destination star 
+           input(type="range" name="star" value=destination.star id="star" min="0" max="10" step="1")
+        div 
+           input(type="submit" name="submit" value="Update")
